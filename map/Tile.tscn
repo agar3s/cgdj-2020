@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://map/Tile.gd" type="Script" id=1]
+
+[node name="Tile" type="Node2D"]
+script = ExtResource( 1 )
+size = 50
+
+[node name="Shape" type="Polygon2D" parent="."]
+color = Color( 0.913725, 0.917647, 0.517647, 1 )
+polygon = PoolVector2Array( 43.3013, -25, 43.3013, 25, 3.06152e-15, 50, -43.3013, 25, -43.3013, -25, -9.18455e-15, -50 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PoolVector2Array( 43.3013, -25, 43.3013, 25, 3.06152e-15, 50, -43.3013, 25, -43.3013, -25, -9.18455e-15, -50 )
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = -20.0275
+margin_top = -7.11504
+margin_right = 19.9725
+margin_bottom = 6.88496
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1.0.1"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
