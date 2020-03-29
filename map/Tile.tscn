@@ -6,6 +6,10 @@
 script = ExtResource( 1 )
 size = 50
 
+[node name="Back" type="Polygon2D" parent="."]
+color = Color( 0.921569, 0.101961, 0.639216, 0 )
+polygon = PoolVector2Array( 45.4663, -26.25, 45.4663, 26.25, 3.21459e-15, 52.5, -45.4663, 26.25, -45.4663, -26.25, -9.64378e-15, -52.5 )
+
 [node name="Shape" type="Polygon2D" parent="."]
 color = Color( 0.913725, 0.917647, 0.517647, 1 )
 polygon = PoolVector2Array( 43.3013, -25, 43.3013, 25, 3.06152e-15, 50, -43.3013, 25, -43.3013, -25, -9.18455e-15, -50 )
