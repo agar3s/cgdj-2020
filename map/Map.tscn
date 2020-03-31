@@ -3,8 +3,167 @@
 [ext_resource path="res://map/Map.gd" type="Script" id=2]
 
 [node name="Map" type="Node2D"]
-position = Vector2( 55.1344, 118.166 )
 script = ExtResource( 2 )
+min_survive = 3
+min_born = 2
+max_born = 2
 
 [node name="Tiles" type="Node2D" parent="."]
-position = Vector2( 323.025, 182.344 )
+position = Vector2( 580, 300 )
+
+[node name="Next" type="Button" parent="."]
+margin_left = 111.403
+margin_top = 51.6408
+margin_right = 185.403
+margin_bottom = 71.6408
+mouse_filter = 1
+text = "Next Step"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Random" type="Button" parent="."]
+margin_left = 29.4976
+margin_top = 262.293
+margin_right = 103.497
+margin_bottom = 282.293
+mouse_filter = 1
+text = "Random"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Clear" type="Button" parent="."]
+margin_left = 26.3699
+margin_top = 296.494
+margin_right = 100.37
+margin_bottom = 316.494
+mouse_filter = 1
+text = "Clear space"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="Button" parent="."]
+margin_left = 17.7964
+margin_top = 53.8569
+margin_right = 91.7965
+margin_bottom = 73.8569
+mouse_filter = 1
+text = "PLAY!!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MinSurvive" type="SpinBox" parent="."]
+margin_left = 20.1424
+margin_top = 127.289
+margin_right = 94.1424
+margin_bottom = 151.289
+rect_pivot_offset = Vector2( 37, 12 )
+max_value = 6.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MaxSurvive" type="SpinBox" parent="."]
+margin_left = 122.137
+margin_top = 128.032
+margin_right = 196.137
+margin_bottom = 152.032
+rect_pivot_offset = Vector2( 37, 12 )
+max_value = 6.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MinBorn" type="SpinBox" parent="."]
+margin_left = 24.4294
+margin_top = 198.385
+margin_right = 98.4294
+margin_bottom = 222.385
+rect_pivot_offset = Vector2( 37, 12 )
+max_value = 6.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MaxBorn" type="SpinBox" parent="."]
+margin_left = 116.556
+margin_top = 195.488
+margin_right = 190.556
+margin_bottom = 219.488
+rect_pivot_offset = Vector2( 37, 12 )
+max_value = 6.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RandomBox" type="SpinBox" parent="."]
+margin_left = 117.561
+margin_top = 261.364
+margin_right = 191.561
+margin_bottom = 285.364
+max_value = 1.0
+step = 0.01
+value = 0.75
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.15
+
+[node name="Label" type="Label" parent="."]
+margin_left = 12.9968
+margin_top = 107.574
+margin_right = 120.997
+margin_bottom = 122.574
+text = "Survive interval:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 12.8607
+margin_top = 173.19
+margin_right = 110.861
+margin_bottom = 187.19
+text = "Born  interval:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 15.4328
+margin_top = 30.0081
+margin_right = 113.433
+margin_bottom = 44.0081
+text = "Controls:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 15.4328
+margin_top = 239.208
+margin_right = 113.433
+margin_bottom = 253.208
+text = "Generation:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 22.4279
+margin_top = 341.159
+margin_right = 221.428
+margin_bottom = 572.159
+text = "Instructions:
+The conditions for a cell to survive are determined by the survive interval and the born interval.
+
+if a live cell is surounded by a number or live cells in the survive interval it survives to the next step otherwise it dies.
+If a dead cell is surounded by a number of live cells in the born interval it comes to life in the next step."
+__meta__ = {
+"_edit_use_anchors_": false
+}
